@@ -1,19 +1,19 @@
 name: JD Purchase Bot
 
 on:
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:
     inputs:
       item_url:
         description: '京东商品URL'
         required: true
         default: 'https://item.jd.com/100209543701.html'
       purchase_time:
-        description: '抢购时间 (YYYY-MM-DD HH:MM:SS)'
+        description: '抢购时间 (YYYY-MM-DD HH:MM:SS，北京时间)'
         required: true
-        default: '2024-01-01 10:00:00'
+        default: '2025-11-01 10:00:00'
   schedule:
-    # 在特定时间自动运行 - 需要时取消注释并修改时间
-    # - cron: '0 2 * * *'  # 每天 UTC 时间 2:00 (北京时间 10:00)
+    # 北京时间每天上午10点运行 (UTC时间02:00)
+    - cron: '0 2 * * *'
 
 env:
   ITEM_URL: ${{ github.event.inputs.item_url }}
