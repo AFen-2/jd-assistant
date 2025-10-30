@@ -1,0 +1,24 @@
+# 商品URL (必填)
+ITEM_URL=https://item.jd.com/100209543701.html
+
+# 抢购时间 (必填，格式: YYYY-MM-DD HH:MM:SS)
+PURCHASE_TIME=2024-01-01 10:00:00
+
+# 浏览器设置
+HEADLESS=False
+USER_AGENT=
+KEEP_BROWSER_OPEN=False
+
+# 超时设置
+TIMEOUT=10
+LOGIN_TIMEOUT=120
+
+# 重试设置
+MAX_RETRY=3
+RETRY_DELAY=0.5
+
+# 通知设置
+ENABLE_NOTIFICATION=True
+
+# 日志设置
+LOG_LEVEL=INFO
